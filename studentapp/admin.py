@@ -8,5 +8,5 @@ class StudentAdmin(admin.ModelAdmin):
     list_display = ['id','sname','marks','city', 'mobile']
 
 
-
+#admin.site.register(Student,StudentAdmin)
 
