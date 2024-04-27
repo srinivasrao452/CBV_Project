@@ -1,0 +1,19 @@
+
+{% extends 'studentapp/base.html' %}
+
+{% block title %}
+	Student Delete
+{% endblock %}
+
+{% block body %}
+	{% if student %}
+        <h2>Are you sure you want to delete this {{ student.sname }} object ?</h2>
+        <form method="POST">
+           {% csrf_token %}
+           <input type="submit" value="Yes, Delete" class="btn btn-danger btn-lg">
+           <a href="{% url 'student_list' %}" class="btn btn-primary btn-lg">Cancel</a>
+        </form>
+	{% else %}
+        <h1>{{ message }}</h1>
+	{% endif %} 
+{% endblock %}

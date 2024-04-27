@@ -1,0 +1,15 @@
+
+{% extends 'studentapp/base.html' %}
+
+{% block title %}
+	Student Detail
+{% endblock %}
+
+{% block body %}
+	{% if student %}
+	  <h1>Student Name is : {{ student.sname }}</h1>
+	  <h1>Student Marks is : {{ student.marks }}</h1>
+	  <h1>Student City is : {{ student.city }}</h1>
+	  <h1>Student Mobile is : {{ student.mobile }}</h1>
+	{% endif %}
+{% endblock %}
